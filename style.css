@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body,
+input,
+button,
+select,
+textarea {
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 26px;
+    background: #E5E5E5;
+
+}
+
+/* Pseudo class, é possível adicionar contéudo
+antes ou após o body */
+body::before {
+    /* top - left só funciona com posicionamento absoluto. 
+    Eles retiram como se fosse a margem que fica sobrando*/
+    content: '';
+    width: 100%;
+    height: 368px;
+    position: absolute;
+    background: #121214;
+    /* z-index -1 coloca o elemento absoluto abaixo da camada atual. */
+    z-index: -1;
+    top: 0;
+    left: 0;
+}
+
+.page {
+    width: 736px;
+    margin: auto;
+}
+
+
+header {
+    width: 319px;
+    margin-top: 74px;
+}
+
+header h1 {
+    font-family: 'Archivo', sans-serif;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 42px;
+    color: white;
+    margin-bottom: 24px;
+}
+
+header p {
+    font-size: 16px;
+    line-height: 26px;
+    color: #42D3FF;
+
+}
+
+header h1 span {
+    color: orange;
+}
+
+form {
+    margin-top: 38px;
+    background: #FAFAFC;
+    min-height: 300px;
+    padding: 64px;
+}
+
+fieldset {
+    border: none;
+}
+
+fieldset legend {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 34px;
+    width: 100%;
+    border-bottom: 1px solid #E6E6F0;
+    padding-bottom: 16px;
+}
+
+.input-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-wrapper label {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    color: #4E4958;
+    margin-bottom: 8px;
+}
+
+.input-wrapper label span {
+    margin-left: 12px;
+    font-size: 12px;
+    line-height: 20px;
+    color: #C1BCCC;
+}
+
+.input-wrapper input,
+select {
+    border: 1px solid #e6e6f08a;
+    border-radius: 8px;
+    color: #a29eaa;
+    height: 56px;
+    padding: 0 24px;
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 24px;
+}
+
+.input-wrapper textarea {
+    border: 1px solid #e6e6f08a;
+    height: 168px;
+    color: #a29eaa;
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 24px;
+    resize: none;
+    padding: 5px 12px;
+
+
+
+
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+}
